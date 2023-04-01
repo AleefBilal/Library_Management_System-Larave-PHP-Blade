@@ -1,0 +1,336 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+@media(max-width: 768px){
+    .header-social-icon{
+        display: none;
+        }
+}
+
+a{
+  text-decoration: none!important;
+}
+/****Navbar***/
+
+nav{
+background-color: rgb(255, 255, 255);
+box-shadow: 1px 1px 2px #4444;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 999;
+}
+nav .navbar-brand{
+    color: var(--bs-orange)!important;
+}
+.navbar-nav .nav-link{
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+navbar-toggler{
+    outline: none !important;
+    padding: none !important;
+}
+ .section-heading{
+    color: var(--bs-orange);
+
+}
+
+
+/****Image slider***/
+
+.carousel-inner .carousel-item{
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-inner .carousel-item::before{
+content: '';
+background-color: rgba(29, 27, 25, 0.5);
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+.carousel-inner .carousel-caption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 38%;
+    left: 0;
+    right: 0;
+}
+.carousel-inner .carousel-caption span{
+    color: var(--bs-orange);
+}
+.carousel-inner .carousel-caption h2{
+    color: rgb(255, 255, 255);
+
+    font-weight: 600;
+    font-size: 40px;
+    width: 80%;
+    margin: 0px auto 20px auto;
+}
+.carousel-inner .carousel-caption p{
+    font-size: 15px;
+    width: 80%;
+    margin: 0px auto 20px auto;
+}
+@media (max-width: 768px){
+ .carousel-inner .carousel-caption h2{
+    font-size: 38px;
+ }
+}
+@media (max-width: 577px){
+    .carousel-inner .carousel-caption h2{
+       font-size: 25px;
+    }
+    .carousel-inner .carousel-caption p{
+        font-size: 13px;
+     }
+}
+/*card styling*/
+
+.container-card{
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff00;
+  }
+  .slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .card{
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070F4;
+    border-radius: 25px 25px 0 25px;
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+  }
+  .card-image{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+  }
+  .button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button:hover{
+    background: #265DF2;
+  }
+
+  .swiper-navBtn{
+    color: #6E93f7;
+    transition: color 0.3s ease;
+  }
+  .swiper-navBtn:hover{
+    color: #4070F4;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #4070F4;
+  }
+
+  @media screen and (max-width: 768px) {
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+  }
+
+  /*Facility Section*/
+.container-facility{
+  width: 100%;
+  height: 90vh;
+  padding: 2% 8% ;
+
+
+}
+.row-facility{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap:20px;
+}
+.facility{
+  text-align: center;
+  padding: 20px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
+}
+.facility i{
+  font-size: 40px;
+  margin-bottom: 10px;
+  color:#265DF2;
+}
+.facility h2{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.facility:hover{
+  background: #265DF2;
+  color: #FFF;
+  transform: scale(1.05);
+}
+.facility:hover i{
+  color: #FFF;
+}
+
+/* Registration form styling */
+.container-form{
+
+margin: 5px;
+padding: 20px;
+}
+.footer{
+  margin-top: auto;
+}
+.container-service{
+  background-color: rgba(182, 175, 175, 0.459);
+  box-shadow: #333;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 50px;
+}
+.book-card-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 10px;
+
+}
+.book-card{
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+.book-card-header{
+    background-color: #061270;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+}
+.book-card-footer{
+    background-color: #f5f5f5;
+    color: #999;
+    font-size: 12px;
+    padding: 10px;
+}
+.book-card-title{
+    margin-top: 10px;
+    font-weight: bold;
+}
+.book-card-text{}
+
+.book-card-body{
+    padding: 20px;
+    background-color: #fffffc;
+}
+.collection-container{
+    margin: 10px;
+    background-color: rgba(12, 12, 13, 0.05);
+   padding: 10px;
+}
